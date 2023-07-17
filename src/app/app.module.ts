@@ -14,6 +14,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { UserComponent } from './user/user.component';
+import { ContentComponent } from './content/content.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { MatListModule } from '@angular/material/list';
     HomeComponent,
     DashboardComponent,
     SidenavComponent,
+    UserComponent,
+    ContentComponent,
+    AnalyticsComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
