@@ -1,0 +1,15 @@
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+:host {
+  display: block;
+}
+
+:host .mat-icon {
+  vertical-align: middle;
+  margin-right: 1rem;
+}
