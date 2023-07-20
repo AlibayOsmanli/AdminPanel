@@ -14,10 +14,25 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import{MatTableModule} from '@angular/material/table';
 import { UserComponent } from './user/user.component';
 import { ContentComponent } from './content/content.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { SettingsComponent } from './settings/settings.component';
+import { MatTable } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { EmpAddComponent } from './emp-add/emp-add.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -30,6 +45,7 @@ import { SettingsComponent } from './settings/settings.component';
     ContentComponent,
     AnalyticsComponent,
     SettingsComponent,
+    EmpAddComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +58,20 @@ import { SettingsComponent } from './settings/settings.component';
     MatIconModule,
     MatDividerModule,
     MatListModule,
+    MatTableModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule,
+    MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

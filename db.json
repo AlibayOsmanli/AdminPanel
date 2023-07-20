@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "Alsdfasdfaibay",
+      "lastName": "Osmasdfnli",
+      "email": "aosmanli20@ku.edu.tr",
+      "dob": "2002-10-18T19:00:00.000Z",
+      "gender": "female",
+      "education": "Bachelor's Degree",
+      "company": "asdf",
+      "experience": 1,
+      "package": 100000,
+      "id": 1
+    }
+  ]
+}
