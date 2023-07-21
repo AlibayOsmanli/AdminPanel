@@ -18,15 +18,15 @@
   },
   "employees": [
     {
-      "firstName": "Alsdfasdfaibay",
-      "lastName": "Osmasdfnli",
+      "firstName": "Alibay",
+      "lastName": "Osmanli",
       "email": "aosmanli20@ku.edu.tr",
-      "dob": "2002-10-18T19:00:00.000Z",
-      "gender": "female",
+      "dob": "2003-10-18T19:00:00.000Z",
+      "gender": "male",
       "education": "Bachelor's Degree",
-      "company": "asdf",
+      "company": "None",
       "experience": 1,
-      "package": 100000,
+      "package": 0,
       "id": 1
     }
   ]

@@ -17,3 +17,9 @@
 .toolbar {
   justify-content: space-between;
 }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
