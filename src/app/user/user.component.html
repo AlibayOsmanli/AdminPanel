@@ -3,7 +3,7 @@
   <span class="example-spacer"></span>
   <button mat-raised-button (click)="OpenForm()">Add Employee</button>
 </mat-toolbar>
-<mat-form-field>
+<mat-form-field style="margin-left: 20px;">
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex: Name" #input>
 </mat-form-field>
@@ -11,7 +11,7 @@
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
 
-    <!-- ID Column -->
+
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
       <td mat-cell *matCellDef="let row"> {{row.id}} </td>

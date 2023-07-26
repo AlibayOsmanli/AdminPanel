@@ -31,7 +31,7 @@ export class EmpAddComponent implements OnInit {
     this.empForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', Validators.email],
       dob: ['', Validators.required],
       gender: ['', Validators.required],
       education: ['', Validators.required],
