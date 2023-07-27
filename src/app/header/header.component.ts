@@ -1,3 +1,4 @@
+// header.component.ts
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmployeeService } from '../services/employee.service';
@@ -10,11 +11,17 @@ import { EmployeeService } from '../services/employee.service';
 export class HeaderComponent implements OnInit {
   @Output() toggleSidebarResult: EventEmitter<any> = new EventEmitter();
   username: string | undefined;
+  isLoggedIn = false;
 
   constructor(private router: Router, public authService: EmployeeService) {}
 
   ngOnInit(): void {
-    this.username = this.authService.getUserName();
+    this.authService.checkLoggedIn().subscribe((isLoggedIn: boolean) => {
+      this.isLoggedIn = isLoggedIn;
+      if (isLoggedIn) {
+        this.username = this.authService.getUserName();
+      }
+    });
   }
 
   toggleSidebar() {
@@ -23,7 +30,8 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.authService.setUserName('');
-    this.authService.setIsLoggedIn(false);
+    this.authService.isLoggedIn = false;
+    this.authService.logout(); // Clear the token on logout
     this.router.navigate(['/login']);
   }
 }

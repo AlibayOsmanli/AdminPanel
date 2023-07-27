@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 export class SignupComponent {
   username: string = '';
   password: string = '';
+  isLoggedIn = false;
 
   constructor(private authService: EmployeeService, private router: Router) {}
 
@@ -45,11 +46,32 @@ export class SignupComponent {
                 title: 'Success!',
                 text: 'Signup successful!'
               });
-              // Set the user as logged in
-              this.authService.setIsLoggedIn(true);
-              this.authService.setUserName(this.username);
-              // Redirect to home component
-              this.router.navigate(['/home']);
+              // Log in the user
+              this.authService.login(this.username, this.password).subscribe(
+                isLoggedIn => {
+                  if (isLoggedIn) {
+                    this.authService.setIsLoggedIn(true);
+                    this.authService.setUserName(this.username);
+                    // Redirect to home component
+                    this.router.navigate(['/home']);
+                  } else {
+                    // handle login error
+                    Swal.fire({
+                      icon: 'error',
+                      title: 'Oops...',
+                      text: 'Error occurred during login after signup'
+                    });
+                  }
+                },
+                () => {
+                  // handle login error
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Error occurred during login after signup'
+                  });
+                }
+              );
             },
             () => {
               // handle signup error

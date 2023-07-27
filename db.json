@@ -50,6 +50,33 @@
       "username": "Bay",
       "password": "1234",
       "id": 8
+    },
+    {
+      "username": "Alb",
+      "password": "1234",
+      "id": 9
+    },
+    {
+      "username": "Here",
+      "password": "1234",
+      "id": 10
+    },
+    {
+      "username": "Hecer",
+      "password": "1234",
+      "id": 11
+    },
+    {
+      "username": "aside",
+      "password": "123",
+      "id": 12
+    },
+    {
+      "username": "sad",
+      "password": "asdf",
+      "id": 13
     }
-  ]
+  ],
+  "checkLoggedIn": [],
+  "logout": []
 }

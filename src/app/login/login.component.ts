@@ -12,18 +12,17 @@ import Swal from 'sweetalert2';
 export class LoginComponent {
   username: string = '';
   password: string = '';
-  isLoggedIn = false;
 
   constructor(private authService: EmployeeService, private router: Router) {}
 
   login() {
     this.authService.login(this.username, this.password).subscribe(
-      isLoggedIn => {
+      (isLoggedIn: boolean) => {
         if (isLoggedIn) {
           // handle successful login
           this.authService.setUserName(this.username);
-          this.authService.setIsLoggedIn(true);
-          this.router.navigate(['/home']); 
+          this.authService.isLoggedIn = true;
+          this.router.navigate(['/home']);
         } else {
           // handle login error
           Swal.fire({
@@ -33,8 +32,8 @@ export class LoginComponent {
           });
         }
       },
-      error => {
-        // handle login error 
+      () => {
+        // handle login error
         Swal.fire({
           icon: 'error',
           title: 'Error occurred during login',
