@@ -8,16 +8,17 @@ import {SettingsComponent } from './settings/settings.component';
 import {ContentComponent} from './content/content.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home' , component: HomeComponent },
-  { path: 'dashboard' , component: DashboardComponent },
-  { path: 'user' , component: UserComponent },
-  { path: 'analytics' , component: AnalyticsComponent },
-  { path: 'settings' , component: SettingsComponent },
-  { path: 'content' , component: ContentComponent},
+  { path: 'home' , component: HomeComponent , canActivate: [AuthGuard]},
+  { path: 'dashboard' , component: DashboardComponent , canActivate: [AuthGuard]},
+  { path: 'user' , component: UserComponent , canActivate: [AuthGuard]},
+  { path: 'analytics' , component: AnalyticsComponent , canActivate: [AuthGuard]},
+  { path: 'settings' , component: SettingsComponent , canActivate: [AuthGuard]},
+  { path: 'content' , component: ContentComponent, canActivate: [AuthGuard]},
   { path: 'login' , component: LoginComponent},
   { path: 'signup' , component: SignupComponent}
 ];
