@@ -33,6 +33,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,8 @@ import { MatSortModule } from '@angular/material/sort';
     AnalyticsComponent,
     SettingsComponent,
     EmpAddComponent,
+    LoginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,6 +77,8 @@ import { MatSortModule } from '@angular/material/sort';
     HttpClientModule,
     MatPaginatorModule,
     MatSortModule,
+    MatCardModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],

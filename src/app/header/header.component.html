@@ -1,3 +1,4 @@
+<!-- header.component.html -->
 <mat-toolbar>
   <mat-toolbar-row class="toolbar">
     <button mat-icon-button (click)="toggleSidebar()" style="border: 0cm;">
@@ -5,19 +6,20 @@
     </button>
     <div>
       <ul>
-        <li>
-          <button
-            mat-button
-            [matMenuTriggerFor]="menu"
-            class="user">
-            <img src="./assets/user.jpg" alt="" width="40" height="40" />
-            User Name
-            <mat-icon
-              >keyboard_arrow_down</mat-icon
-            >
+        <li *ngIf="!authService.getIsLoggedIn()">
+          <a mat-button routerLink="/login">Login</a>
+        </li>
+        <li *ngIf="!authService.getIsLoggedIn()">
+          <a mat-button routerLink="/signup">Signup</a>
+        </li>
+        <li *ngIf="authService.getIsLoggedIn()">
+          <button mat-button [matMenuTriggerFor]="menu" class="user">
+            <!--<img src="./assets/user.jpg" alt="" width="40" height="40" />-->
+            {{ authService.getUserName() }}
+            <mat-icon>keyboard_arrow_down</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item>
+            <button mat-menu-item (click)="logout()">
               <mat-icon>exit_to_app</mat-icon>
               Logout
             </button>

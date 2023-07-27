@@ -6,6 +6,8 @@ import { UserComponent} from './user/user.component';
 import {AnalyticsComponent } from './analytics/analytics.component';
 import {SettingsComponent } from './settings/settings.component';
 import {ContentComponent} from './content/content.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 const routes: Routes = [
@@ -15,7 +17,9 @@ const routes: Routes = [
   { path: 'user' , component: UserComponent },
   { path: 'analytics' , component: AnalyticsComponent },
   { path: 'settings' , component: SettingsComponent },
-  { path: 'content' , component: ContentComponent}
+  { path: 'content' , component: ContentComponent},
+  { path: 'login' , component: LoginComponent},
+  { path: 'signup' , component: SignupComponent}
 ];
 
 @NgModule({
